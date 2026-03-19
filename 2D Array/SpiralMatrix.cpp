@@ -4,8 +4,8 @@ using namespace std;
 void spiralMatrix(int arr[][4], int n, int m){
     int srow = 0;
     int scol = 0;
-    int erow = n-1;
-    int ecol = m-1;
+    int erow = m-1;
+    int ecol = n-1;
 
     while(srow <= erow && scol <= ecol){
         // top
@@ -19,11 +19,17 @@ void spiralMatrix(int arr[][4], int n, int m){
 
         // bottom
         for (int i=ecol-1; i>=scol; i--){
+            if(srow==erow){
+                break; 
+            }
             cout<<arr[erow][i] << " ";
         }
 
         // left 
         for (int i = erow-1; i>srow; i-- ){
+            if(scol==ecol){
+                break; 
+            }
             cout<<arr[i][scol] << " ";
         }
         srow++; 
