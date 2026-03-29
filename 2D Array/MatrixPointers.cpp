@@ -1,8 +1,6 @@
 #include<iostream>
 using namespace std; 
 
-
-
 int main(){
     int mat[3][3] = {{1, 2, 3},
 {4, 5, 6},
@@ -12,4 +10,5 @@ int main(){
     cout << (mat + 1)[0][0] << endl ;
 
     return 1; 
+    
 }
