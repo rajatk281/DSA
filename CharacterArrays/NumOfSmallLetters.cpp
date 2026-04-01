@@ -6,7 +6,7 @@ int countSmallLetters(string str){
     for(auto val: str){
         if(val>=97 && val<=122){
             count++;
-        }
+        }   
     }
     return count ; 
 }
