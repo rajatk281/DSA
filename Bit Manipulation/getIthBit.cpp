@@ -11,8 +11,14 @@ int getIthBit(int num, int pos){
     }
 }
 
+int setIthbit(int num, int pos){
+    int bitMask = 1<<pos; 
+    return (num|bitMask);
+}
+
 int main (){
-    cout<<getIthBit(7, 1)<<endl;
-    cout<<getIthBit(6, 2)<<endl;
-    cout<<getIthBit(7, 5)<<endl;
+    // cout<<getIthBit(7, 1)<<endl;
+    // cout<<getIthBit(6, 2)<<endl;
+    // cout<<getIthBit(7, 5)<<endl;
+    cout<<setIthbit(6, 3);
 }
