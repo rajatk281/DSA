@@ -2,5 +2,7 @@
 using namespace std; 
 
 int main (){
-    cout<<~0;
+    int result = 8>>1;
+    cout<<~4<<endl;
+    cout<<result;
 }
