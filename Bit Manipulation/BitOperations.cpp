@@ -16,9 +16,18 @@ int setIthbit(int num, int pos){
     return (num|bitMask);
 }
 
+int clearIthBit(int num, int pos){
+    int bitMask = ~(1<<pos);
+    return (num&bitMask);
+}
+
 int main (){
     // cout<<getIthBit(7, 1)<<endl;
     // cout<<getIthBit(6, 2)<<endl;
     // cout<<getIthBit(7, 5)<<endl;
-    cout<<setIthbit(6, 3);
+
+    // cout<<setIthbit(6, 3);
+
+    cout<<clearIthBit(6, 1);
+
 }
