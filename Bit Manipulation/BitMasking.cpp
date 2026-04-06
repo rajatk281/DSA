@@ -10,6 +10,6 @@ void oddOrEven(int num){
 }
 
 int main(){
-    oddOrEven(10);
+    oddOrEven(10);  
     oddOrEven(11);
 }
