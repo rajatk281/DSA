@@ -21,13 +21,17 @@ int clearIthBit(int num, int pos){
     return (num&bitMask);
 }
 
+bool isPowerOfTwo2(int num){
+    return (num&(num-1));
+}
+
 int main (){
     // cout<<getIthBit(7, 1)<<endl;
-    // cout<<getIthBit(6, 2)<<endl;
-    // cout<<getIthBit(7, 5)<<endl;
 
     // cout<<setIthbit(6, 3);
 
-    cout<<clearIthBit(6, 1);
+    // cout<<clearIthBit(6, 1);
+
+    cout<<isPowerOfTwo2(8);
 
 }
