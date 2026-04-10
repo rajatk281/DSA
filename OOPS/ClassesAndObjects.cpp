@@ -5,15 +5,18 @@ class Student {
 
     // Properties
     string name; 
-    float cgpa; 
+    public:
+        float cgpa; 
 
-    // Methods
-    void getPercentage(){
-        cout<<cgpa*100; 
-    }
+        // Methods
+        void getPercentage(){
+            cout<<(cgpa*10)<<"% \n";   
+        }
 };
 
 int main (){
     Student s1; 
-    cout<<sizeof(s1);
+    s1.cgpa = 9;
+    cout<<s1.cgpa<<endl;
+    s1.getPercentage();
 }
