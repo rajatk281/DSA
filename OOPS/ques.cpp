@@ -5,7 +5,7 @@
 using namespace std ; 
 
 class Person {
-    // Private 
+    
     int id ;
     int password;
     public:
