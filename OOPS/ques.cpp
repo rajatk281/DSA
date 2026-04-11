@@ -5,7 +5,8 @@
 using namespace std ; 
 
 class Person {
-    int id ; 
+    // Private 
+    int id ;
     int password;
     public:
         string username;
@@ -24,5 +25,5 @@ class Person {
 int main (){
     Person P1("Rajat", 12345);
     cout<<P1.getPassword()<<endl;
-    cout<<P1.username;
+    cout<<P1.username;  
 }

@@ -1,3 +1,7 @@
+#include<vector>
+#include<iostream>
+using namespace std;
+
 vector<int> findErrorNums(vector<int>& v) {
     int duplicate = -1, missing = -1;
 
