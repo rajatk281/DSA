@@ -10,7 +10,7 @@ class Person {
     public:
         string username;
         int *mileage;
-        Person (string name, int newPassword){          
+        Person (string name, int newPassword){          // Constructor
             username = name ;
             password = newPassword;
             mileage = new int ;                         // Dynamic alllocation 
