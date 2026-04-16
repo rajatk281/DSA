@@ -12,6 +12,14 @@ class Complex {
         void showNum(){
             cout<<real<<" + "<<imag<<"i\n";
         }
+
+        // Operator Overloading
+        Complex operator + (Complex &c2){
+            int resReal = this->real + c2.real;
+            int resimag = this->imag + c2.imag;
+            Complex C3(resReal, resimag);
+            return C3;
+        }
 };
 
 int main (){
@@ -19,4 +27,6 @@ int main (){
     Complex C2(3, 7);
     C1.showNum();
     C2.showNum();
+    Complex C3 = C1 + C2;
+    C3.showNum();
 }
