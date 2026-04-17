@@ -1,7 +1,5 @@
 #include<iostream>
 using namespace std; 
-
-// Polymorphism 
 class Complex {
     int real ;
     int imag ;
