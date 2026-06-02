@@ -1,12 +1,12 @@
 #include<iostream>
 using namespace std; 
 
-int dec( int n ){
+void dec( int n ){
     if(n==0){
-        return 1; 
+        return ; 
     }
     cout<<n<<endl; 
-    return dec(n-1);
+    dec(n-1);
 }
 
 int main (){
