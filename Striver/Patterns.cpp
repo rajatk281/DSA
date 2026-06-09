@@ -49,16 +49,33 @@ void sixthPattern(int N){
         cout<<endl;
     }
 }
-void sixthPattern(int N){
-    for (int i = 0 ; i <N; i++){
-        for (int j=N-1; j>=i; j--){
-            cout<<" "<<N-j<<" ";
+void seventhPattern(int N){
+    
+    for (int i = 0 ; i<N; i++){
+        for (int k = N-(i+1); k>0; k-- ){
+            cout<<" ";
+        }
+        for (int j=1; j<(i+1)*2; j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
+void eigththPattern(int N){
+    
+    for (int i = 0 ; i<N; i++){
+        for (int j=(N-i); j<N; j++){
+            cout<<" ";
+        }
+        for (int k = 1; k<((N*2)-(2*i)); k++ ){
+            cout<<"*";
         }
         cout<<endl;
     }
 }
 
 
+
 int main (){
-    sixthPattern(5);
+    eigththPattern(5);
 }
