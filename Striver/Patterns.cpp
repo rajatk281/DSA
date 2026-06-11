@@ -109,7 +109,21 @@ void tenthPattern(int N){
         cout<<endl; 
     }
 }
+void eleventhPattern(int N){
+    int arr[2] = {0,1};
+    for (int i = 1; i<=N; i++){
+        for (int j=1; j<=i; j++){
+            if((i+j)%2==0){
+                cout<<1; 
+            }
+            else{
+                cout<<0; 
+            }
+        }
+        cout<<endl; 
+    }
+}
 
 int main (){
-    tenthPattern(10);
+    eleventhPattern(5);
 }
