@@ -285,7 +285,28 @@ void eigtheenthPattern(int N){
         cout<<endl ; 
     }
 }
+void nineteenthPattern(int N){
+    for (int i=1; i<=2*N; i++){
+        for (int j=1; j<=2*N; j++){
+            if(i<=5){
+                if(j<=N-(i-1) || j>N+(i-1) ){
+                    cout<< "*";
+                } else {
+                    cout<< " ";
+                }
+            }else {
+                if(j<=i-N || j>2*N-(i-N)){
+                    cout<<"*";
+                }else {
+                    cout<< " ";
+                }
+            }
+        }
+        cout<<endl;
+    }
+}
+
 int main()
 {
-    eigtheenthPattern(5);
+    nineteenthPattern(5);
 }
