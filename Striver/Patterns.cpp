@@ -123,6 +123,16 @@ void eleventhPattern(int N){
         cout<<endl; 
     }
 }
+void twelthPattern(int N){
+    for (int i=1; i<=N; i++){
+        for (int j=1; j<=N; j++){
+            
+        }
+        for (int j=N; j>=1; j--){
+            
+        }
+    }
+}
 
 int main (){
     eleventhPattern(5);
