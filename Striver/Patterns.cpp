@@ -325,8 +325,24 @@ void twentiethPattern(int N){
         cout<<endl;
     }
 }
+void twentyFirstPattern(int N){
+    for (int i=1; i<=N; i++){
+        for (int j=1; j<=N; j++){
+            if (i==1 || i==N){
+                cout<< "*";
+            }else {
+                if(j==1 || j==N){
+                    cout<<"*";
+                }else{
+                    cout<< " ";
+                }
+            }
+        }
+        cout<<endl; 
+    }
+}
 
 int main()
 {
-    twentiethPattern(10);
+    twentyFirstPattern(5);
 }
