@@ -155,7 +155,38 @@ void thirteenthPattern(int N){
         cout<<endl; 
     }
 }
+void fourteenthPattern(int N){
+    for (int i = 1; i<=N; i++){
+        char ch = 'A';
+        for (int j=i; j>0; j--){
+            cout<<ch<<" ";
+            ch++;
+        }
+        cout<<endl; 
+    }
+}
+void fifteenthPattern(int N){
+    for (int i = 0; i<N; i++){
+        char ch = 'A';
+        for (int j=N-i; j>0; j--){
+            cout<<ch<<" ";
+            ch++;
+        }
+        cout<<endl; 
+    }
+}
+void sixteenthPattern(int N){
+    char ch = 'A';
+    for (int i = 0; i<N; i++){
+        for (int j=i+1; j>0; j--){
+            cout<<ch<<" ";
+        }
+        ch++;
+        cout<<endl; 
+    }
+}
+
 
 int main (){
-    thirteenthPattern(5);
+    sixteenthPattern(5);
 }
