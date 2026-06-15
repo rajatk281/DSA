@@ -128,11 +128,9 @@ void twelthPattern(int N){
         int temp=i;
         int temp2=i;
         for (int j=1; j<=N; j++){
-            
             if(temp>0){
                 cout<<j;
-            }
-            else{
+            }else{
                 cout<<" ";
             }
             temp--;
@@ -140,16 +138,24 @@ void twelthPattern(int N){
         for (int k=N; k>0;k--){
             if(k>temp2){
                 cout<<" ";
-            }
-            else{
+            }else{
                 cout<<k;
             }
-
+        }
+        cout<<endl; 
+    }
+}
+void thirteenthPattern(int N){
+    int num=0;
+    for (int i=1; i<=N; i++){
+        for (int j=i; j>0; j--){
+            num=num+1;
+            cout << num <<" "; 
         }
         cout<<endl; 
     }
 }
 
 int main (){
-    twelthPattern(5);
+    thirteenthPattern(5);
 }
