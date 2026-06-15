@@ -305,8 +305,28 @@ void nineteenthPattern(int N){
         cout<<endl;
     }
 }
+void twentiethPattern(int N){
+    for (int i=1; i<=2*N; i++){
+        for (int j=1; j<=2*N; j++){
+            if(i<=N){
+                if(j<=i|| j>2*N-i ){
+                    cout<< "*";
+                } else {
+                    cout<< " ";
+                }
+            }else {
+                if(j<=2*N-i || j>i){
+                    cout<<"*";
+                }else {
+                    cout<< " ";
+                }
+            }
+        }
+        cout<<endl;
+    }
+}
 
 int main()
 {
-    nineteenthPattern(10);
+    twentiethPattern(10);
 }
