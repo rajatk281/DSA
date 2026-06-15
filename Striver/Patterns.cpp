@@ -125,15 +125,31 @@ void eleventhPattern(int N){
 }
 void twelthPattern(int N){
     for (int i=1; i<=N; i++){
+        int temp=i;
+        int temp2=i;
         for (int j=1; j<=N; j++){
             
+            if(temp>0){
+                cout<<j;
+            }
+            else{
+                cout<<" ";
+            }
+            temp--;
         }
-        for (int j=N; j>=1; j--){
-            
+        for (int k=N; k>0;k--){
+            if(k>temp2){
+                cout<<" ";
+            }
+            else{
+                cout<<k;
+            }
+
         }
+        cout<<endl; 
     }
 }
 
 int main (){
-    eleventhPattern(5);
+    twelthPattern(5);
 }
