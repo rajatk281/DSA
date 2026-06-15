@@ -275,8 +275,17 @@ void seventeenthPattern(int N)
         cout<<endl; 
     }
 }
-
+void eigtheenthPattern(int N){
+    for (int i=1; i<=N; i++){
+        char ch='E';
+        for (int j = i; j>0; j--){
+            char lt=ch-(j-1);
+            cout<<lt<<" "; 
+        }
+        cout<<endl ; 
+    }
+}
 int main()
 {
-    seventeenthPattern(5);
+    eigtheenthPattern(5);
 }
