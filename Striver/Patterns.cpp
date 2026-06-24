@@ -261,88 +261,143 @@ void seventeenthPattern(int N)
         {
             cout << " ";
         }
-        for (int j=1 ; j<2*i; j++){
-            if(j<=i){
-                cout<<ch; 
-                if(j<i){
+        for (int j = 1; j < 2 * i; j++)
+        {
+            if (j <= i)
+            {
+                cout << ch;
+                if (j < i)
+                {
                     ch++;
                 }
-            }else{
-                ch--; 
-                cout<<ch;
+            }
+            else
+            {
+                ch--;
+                cout << ch;
             }
         }
-        cout<<endl; 
+        cout << endl;
     }
 }
-void eigtheenthPattern(int N){
-    for (int i=1; i<=N; i++){
-        char ch='E';
-        for (int j = i; j>0; j--){
-            char lt=ch-(j-1);
-            cout<<lt<<" "; 
+void eigtheenthPattern(int N)
+{
+    for (int i = 1; i <= N; i++)
+    {
+        char ch = 'E';
+        for (int j = i; j > 0; j--)
+        {
+            char lt = ch - (j - 1);
+            cout << lt << " ";
         }
-        cout<<endl ; 
+        cout << endl;
     }
 }
-void nineteenthPattern(int N){
-    for (int i=1; i<=2*N; i++){
-        for (int j=1; j<=2*N; j++){
-            if(i<=N){
-                if(j<=N-(i-1) || j>N+(i-1) ){
-                    cout<< "*";
-                } else {
-                    cout<< " ";
+void nineteenthPattern(int N)
+{
+    for (int i = 1; i <= 2 * N; i++)
+    {
+        for (int j = 1; j <= 2 * N; j++)
+        {
+            if (i <= N)
+            {
+                if (j <= N - (i - 1) || j > N + (i - 1))
+                {
+                    cout << "*";
                 }
-            }else {
-                if(j<=i-N || j>2*N-(i-N)){
-                    cout<<"*";
-                }else {
-                    cout<< " ";
+                else
+                {
+                    cout << " ";
                 }
             }
-        }
-        cout<<endl;
-    }
-}
-void twentiethPattern(int N){
-    for (int i=1; i<=2*N; i++){
-        for (int j=1; j<=2*N; j++){
-            if(i<=N){
-                if(j<=i|| j>2*N-i ){
-                    cout<< "*";
-                } else {
-                    cout<< " ";
+            else
+            {
+                if (j <= i - N || j > 2 * N - (i - N))
+                {
+                    cout << "*";
                 }
-            }else {
-                if(j<=2*N-i || j>i){
-                    cout<<"*";
-                }else {
-                    cout<< " ";
+                else
+                {
+                    cout << " ";
                 }
             }
         }
-        cout<<endl;
+        cout << endl;
     }
 }
-void twentyFirstPattern(int N){
-    for (int i=1; i<=N; i++){
-        for (int j=1; j<=N; j++){
-            if (i==1 || i==N){
-                cout<< "*";
-            }else {
-                if(j==1 || j==N){
-                    cout<<"*";
-                }else{
-                    cout<< " ";
+void twentiethPattern(int N)
+{
+    for (int i = 1; i <= 2 * N; i++)
+    {
+        for (int j = 1; j <= 2 * N; j++)
+        {
+            if (i <= N)
+            {
+                if (j <= i || j > 2 * N - i)
+                {
+                    cout << "*";
+                }
+                else
+                {
+                    cout << " ";
+                }
+            }
+            else
+            {
+                if (j <= 2 * N - i || j > i)
+                {
+                    cout << "*";
+                }
+                else
+                {
+                    cout << " ";
                 }
             }
         }
-        cout<<endl; 
+        cout << endl;
+    }
+}
+
+void twentyFirstPattern(int N)
+{
+    for (int i = 1; i <= N; i++)
+    {
+        for (int j = 1; j <= N; j++)
+        {
+            if (i == 1 || i == N)
+            {
+                cout << "*";
+            }
+            else
+            {
+                if (j == 1 || j == N)
+                {
+                    cout << "*";
+                }
+                else
+                {
+                    cout << " ";
+                }
+            }
+        }
+        cout << endl;
+    }
+}
+
+void twentySecondPattern(int N){
+    for (int i =0; i < 2*N-1; i++){
+        for (int j=0; j<2*N-1; j++){
+            int top = i; 
+            int bottom = (2*N-2)-i;
+            int left = j; 
+            int right = (2*N-2)-j;
+            cout << N - min (min(top, bottom), min(left, right))<< " ";
+        }
+        cout << endl ;
     }
 }
 
 int main()
 {
-    twentyFirstPattern(5);
+    twentySecondPattern(4);
 }
