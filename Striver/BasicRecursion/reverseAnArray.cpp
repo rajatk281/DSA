@@ -12,7 +12,7 @@ void reverse(int arr[], int size, int i, int j){
 }
 
 int main (){
-    int arr[] = {1, 2, 3, 4, 5};
+    int arr[] = {1, 2, 3, 4, 5, 6};
     reverse(arr, (sizeof(arr)/sizeof(int)), 0, (sizeof(arr)/sizeof(int))-1);
     for (int i=0; i <(sizeof(arr)/sizeof(int)); i++){
         cout<<arr[i]<< ", "; 
