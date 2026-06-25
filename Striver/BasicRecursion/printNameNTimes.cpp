@@ -3,10 +3,13 @@
 using namespace std ;
 
 void printName(string name, int N){
-    for (int i=0; i<N; i++){
-        cout <<name<<" "; 
+    if (N==0){
+        return ; 
     }
+    cout << name<<" ";
+    N--; 
+    printName(name, N);
 }
 int main (){
-       printName("Rajat", 5);
+       printName("Rajat", 3);
 }
