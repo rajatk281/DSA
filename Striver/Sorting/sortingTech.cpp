@@ -1,8 +1,8 @@
 #include<iostream>
 using namespace std;
+
 // We actually compare each and bubble with it's successor ans swap the values.
 // Time complexity : O(n^2)
-
 void bubbleSort(int arr[], int size){
     bool isSwap = false; 
     for (int i = 0; i<size-1; i++){
@@ -19,7 +19,8 @@ void bubbleSort(int arr[], int size){
     }
 }
 
-
+// We took sorted and unsorted part of an array and compare for the smallest idx element wrt to the ith element in each iteration .
+// Time complexity : O(n^2)
 void insertionSort(int arr[], int size){
     for (int i=0; i<size-1; i++){
         int smallestIdx = i; 
