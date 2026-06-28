@@ -1,13 +1,21 @@
 #include<iostream>
 using namespace std;
+// We actually compare each and bubble with it's successor ans swap the values.
+// Time complexity : O(n^2)
 
 void bubbleSort(int arr[], int size){
+    bool isSwap = false; 
     for (int i = 0; i<size-1; i++){
         for (int j = 0; j<size-i-1; j++){
             if (arr[j]>arr[j+1]){
                 swap(arr[j], arr[j+1]);
+                isSwap=true; 
             }
         }
+    }
+    // Optimization 
+    if (!isSwap){
+        return; 
     }
 }
 
