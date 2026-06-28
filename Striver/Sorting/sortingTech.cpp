@@ -34,7 +34,8 @@ void selectionSort(int arr[], int size){
 }
 
 
-
+// Based on placing card games, we insert the each element in its correct position.
+// Time complexity : O(n^2)
 void insertionSort(int arr[], int size){
     for (int i=1; i<size; i++){
         int curr = arr[i];
