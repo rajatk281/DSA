@@ -19,9 +19,9 @@ void bubbleSort(int arr[], int size){
     }
 }
 
-// We took sorted and unsorted part of an array and compare for the smallest idx element wrt to the ith element in each iteration .
+// We select sorted and unsorted part of an array and compare for the smallest idx element wrt to the ith element in each iteration .
 // Time complexity : O(n^2)
-void insertionSort(int arr[], int size){
+void selectionSort(int arr[], int size){
     for (int i=0; i<size-1; i++){
         int smallestIdx = i; 
         for (int j=i+1; j<size; j++){
@@ -41,6 +41,6 @@ void print(int arr[], int size){
 
 int main (){
     int arr[] = {5, 3,2 ,1, 4};
-    insertionSort(arr, sizeof(arr)/sizeof(int));
+    selectionSort(arr, sizeof(arr)/sizeof(int));
     print(arr, sizeof(arr)/sizeof(int));
 }
