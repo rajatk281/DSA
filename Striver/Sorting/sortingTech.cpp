@@ -82,7 +82,7 @@ void recInsertionSort(int arr[], int size, int i){
     arr[prev + 1] = curr;
     recInsertionSort(arr, size, i+1);
 }
-//
+// 
 
 void print(int arr[], int size){
     for (int i=0; i<size; i++){
