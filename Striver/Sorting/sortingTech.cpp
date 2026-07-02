@@ -102,7 +102,7 @@ void recInsertionSort(int arr[], int size, int i)
     recInsertionSort(arr, size, i + 1);
 }
 
-// Quick Sort
+// Quick Sort: O ( n^2 )-worst case
 int quickPartition(int arr[], int st, int end)
 {
     int idx = st - 1;
@@ -131,6 +131,7 @@ void quickSort(int arr[], int st, int end)
     }
 }
 
+// Merge Sort: O ( n log n )
 void merge(vector<int> &arr, int st, int mid, int end)
 {
     int i = st;
