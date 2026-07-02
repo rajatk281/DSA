@@ -1,34 +1,42 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 // We actually compare each and bubble with it's successor ans swap the values.
 // Time complexity : O(n^2)
-void bubbleSort(int arr[], int size){
-    bool isSwap = false; 
-    for (int i = 0; i<size-1; i++){
-        for (int j = 0; j<size-i-1; j++){
-            if (arr[j]>arr[j+1]){
-                swap(arr[j], arr[j+1]);
-                isSwap=true; 
+void bubbleSort(int arr[], int size)
+{
+    bool isSwap = false;
+    for (int i = 0; i < size - 1; i++)
+    {
+        for (int j = 0; j < size - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                swap(arr[j], arr[j + 1]);
+                isSwap = true;
             }
-        }   
+        }
     }
-    // Optimization 
-    if (!isSwap){
-        return; 
+    // Optimization
+    if (!isSwap)
+    {
+        return;
     }
 }
 
-void recBubbleSort(int arr[], int n){
+void recBubbleSort(int arr[], int n)
+{
     // Base case
     if (n == 1)
         return;
-        
+
     bool isSwap = false;
 
     // One complete pass
-    for (int i = 0; i < n - 1; i++) {
-        if (arr[i] > arr[i + 1]) {
+    for (int i = 0; i < n - 1; i++)
+    {
+        if (arr[i] > arr[i + 1])
+        {
             swap(arr[i], arr[i + 1]);
             isSwap = true;
         }
@@ -44,12 +52,16 @@ void recBubbleSort(int arr[], int n){
 
 // We select sorted and unsorted part of an array and compare for the smallest idx element wrt to the ith element in each iteration .
 // Time complexity : O(n^2)
-void selectionSort(int arr[], int size){
-    for (int i=0; i<size-1; i++){
-        int smallestIdx = i; 
-        for (int j=i+1; j<size; j++){
-            if(arr[j]<arr[smallestIdx]){
-                smallestIdx = j; 
+void selectionSort(int arr[], int size)
+{
+    for (int i = 0; i < size - 1; i++)
+    {
+        int smallestIdx = i;
+        for (int j = i + 1; j < size; j++)
+        {
+            if (arr[j] < arr[smallestIdx])
+            {
+                smallestIdx = j;
             }
         }
         swap(arr[i], arr[smallestIdx]);
@@ -58,40 +70,78 @@ void selectionSort(int arr[], int size){
 
 // Based on placing card games, we insert the each element in its correct position.
 // Time complexity : O(n^2)
-void insertionSort(int arr[], int size){
-    for (int i=1; i<size; i++){
+void insertionSort(int arr[], int size)
+{
+    for (int i = 1; i < size; i++)
+    {
         int curr = arr[i];
-        int prev = i-1; 
-        while (prev>=0 && arr[prev]>curr){
-            arr[prev+1] = arr[prev];
+        int prev = i - 1;
+        while (prev >= 0 && arr[prev] > curr)
+        {
+            arr[prev + 1] = arr[prev];
             prev--;
         }
-        swap(arr[prev+1], curr);
+        swap(arr[prev + 1], curr);
     }
 }
 
-void recInsertionSort(int arr[], int size, int i){
-    if (i>=size)  return ;
-    
-    int prev = i-1; 
+void recInsertionSort(int arr[], int size, int i)
+{
+    if (i >= size)
+        return;
+
+    int prev = i - 1;
     int curr = arr[i];
-    while(prev>=0 && arr[prev]>curr){
-        arr[prev+1] = arr[prev];
-        prev--; 
+    while (prev >= 0 && arr[prev] > curr)
+    {
+        arr[prev + 1] = arr[prev];
+        prev--;
     }
     arr[prev + 1] = curr;
-    recInsertionSort(arr, size, i+1);
+    recInsertionSort(arr, size, i + 1);
 }
 
+// Quick Sort 
+int quickPartition(int arr[], int st, int end)
+{
+    int idx = st - 1;
+    int pivt = arr[end];
 
-void print(int arr[], int size){
-    for (int i=0; i<size; i++){
+    for (int j = st; j < end; j++)
+    {
+        if (arr[j] <= pivt)
+        {
+            idx++;
+            swap(arr[j], arr[idx]);
+        }
+    }
+    idx++;
+    swap(arr[idx], arr[end]);
+
+    return idx;
+}
+void quickSort(int arr[], int st, int end)
+{
+    if (st < end)
+    {
+        int pvtIdx = quickPartition(arr, st, end);
+        quickSort(arr, st, pvtIdx - 1);
+        quickSort(arr, pvtIdx + 1, end);
+    }
+}
+
+void print(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
         cout << arr[i] << " ";
     }
 }
 //
-int main (){
-    int arr[] = {5, 3,2 ,1, 4};
-    recInsertionSort(arr, sizeof(arr)/sizeof(int), 1);
-    print(arr, sizeof(arr)/sizeof(int));
+int main()
+{
+    int arr[] = {5, 3, 2, 1, 4};
+    int size = sizeof(arr) / sizeof(int);
+    quickSort(arr, 0, size - 1);
+    print(arr, sizeof(arr) / sizeof(int));
 }
