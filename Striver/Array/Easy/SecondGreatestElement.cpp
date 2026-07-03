@@ -4,13 +4,14 @@
 #include<algorithm>
 using namespace std; 
 
+// Bruteforce Approach: O( nlogn )
 pair<int, int> secGreatElement(vector<int> arr){
     pair<int, int> p;
     sort(arr.begin(), arr.end());
     return  make_pair(arr[arr.size()-2], arr[1]);
 }
 
-// Optimized approach 
+// Optimized approach: O(n)
 void optSecGreatElement(vector<int> arr){
     if (arr.size()==1 || arr.size()==0){
         cout<<-1<<" "<<-1<<endl; 
