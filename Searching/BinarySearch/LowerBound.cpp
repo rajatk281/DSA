@@ -29,10 +29,27 @@ int B_lowerBound(vector<int> nums, int k){
     }
     return ans; 
 }
+int B_upperBound(vector<int> nums, int k){
+    int low =0 ;
+    int high=nums.size()-1; 
+    int ans=nums.size(); 
+    while(low<=high){
+        int mid = low+(high-low)/2; 
+        if (nums[mid] > k ) {
+           ans = mid; 
+           high = mid-1; 
+        }
+        else{
+            low=mid+1; 
+        }
+    }
+    return ans; 
+}
 
 
 int main (){
-    vector<int> arr = {3,5,8,15,19};
+    vector<int> arr = {3,5,8,9,15,19};
     // cout<<L_lowerBound(arr, 9);
-    cout<<B_lowerBound(arr, 9);
+    // cout<<B_lowerBound(arr, 9);
+    cout<<B_upperBound(arr, 9);
 }
