@@ -34,7 +34,7 @@ public:
 
             // If Koko can finish all bananas within 'h' hours,
             // then 'mid' is a VALID speed.
-            //
+            
             // But we want the MINIMUM valid speed,
             // so we try to find an even smaller speed.
             if (hours <= h) {
