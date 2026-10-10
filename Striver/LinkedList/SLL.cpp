@@ -73,13 +73,32 @@ ListNode *KthDeletion(ListNode *&head, int k)
     return head;
 }
 
-// Insert head 
+// Insertion at head 
 ListNode* insertHead(ListNode* &head, int val){
     ListNode* newNode = new ListNode(val);
     newNode->next = head; 
     head = newNode; 
     return head ;
 }
+
+// Insertion at tail 
+ListNode* insertTail(ListNode* &head, int val){
+    if (head==nullptr){
+        ListNode* newNode = new ListNode(val);
+        newNode->data = val; 
+        head = newNode; 
+        return head; 
+    }
+    ListNode* temp = head; 
+    while(temp->next!= nullptr){
+        temp=temp->next; 
+    }
+    ListNode* newNode = new ListNode(val);
+    temp->next = newNode; 
+    newNode->data = val; 
+    return head; 
+}
+
 int main()
 {
 
